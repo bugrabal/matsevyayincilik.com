@@ -1,0 +1,110 @@
+
+/* Konteyner: Ekranın sol alt köşesinde sabit duracak */
+.whatsapp-container {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 9999; /* Her şeyin üstünde */
+  }
+  
+  /* WhatsApp Butonu (Kare, hafif yuvarlatılmış kenarlar) */
+  .whatsapp-button {
+    width: 60px;
+    height: 60px;
+    background-color: #25d366; /* WhatsApp yeşili */
+    border-radius: 8px;  /* Köşeler hafif yuvarlatılsın */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Butona hover efekti - ufak dönüş ve büyüme */
+  .whatsapp-button:hover {
+    transform: scale(1.1) rotate(5deg);
+  }
+  
+  /* İkonun kendisi - Daha büyük görünmesi için boyutunu artırdık */
+  .whatsapp-button img {
+    width: 38px;
+    height: 38px;
+  }
+  
+  /* Açılır kart - Başlangıçta gizli */
+  .whatsapp-card {
+    display: none; /* JavaScript ile açıp kapatacağız */
+    width: 240px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 0;
+    bottom: 80px; /* Butondan biraz yukarıda açılacak */
+    padding: 16px;
+    transform-origin: bottom left;
+    animation-fill-mode: forwards;
+  }
+  
+  /* Profil resmi: Siz kendi fotoğrafınızı ekleyebilirsiniz */
+  .profile-pic {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: url('images/adamikon-12.png') no-repeat center/cover; /* Kendi resminizi ekleyin */
+    margin: 0 auto 8px auto; /* Ortala ve alt boşluk */
+  }
+  
+  /* Profil ismi */
+  .profile-name {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  /* Mesaj Gönder butonu */
+  .send-message {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    background: #25d366;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: sans-serif;
+    transition: background 0.3s ease;
+  }
+  
+  .send-message:hover {
+    background: #20b05d; /* Hover rengi */
+  }
+  
+  /* 'open' sınıfı aktif olduğunda kart görünecek ve animasyon başlayacak */
+  .whatsapp-container.open .whatsapp-card {
+    display: block;
+    animation: openCard 0.6s ease-out forwards;
+  }
+  
+  /* Açılma animasyonu: ufak bir bounce/scale/rotate efekti */
+  @keyframes openCard {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px) translateY(30px) scale(0.5) rotate(-10deg);
+    }
+    50% {
+      opacity: 0.7;
+      transform: translateX(10px) translateY(-5px) scale(1.1) rotate(2deg);
+    }
+    70% {
+      transform: translateX(-3px) translateY(3px) scale(0.95) rotate(-1deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0) translateY(0) scale(1) rotate(0);
+    }
+  }
+  
