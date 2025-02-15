@@ -1,0 +1,62 @@
+@font-face { font-family: 'Satoshi'; src: url('/fonts/Satoshi-Regular.otf') format('opentype'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Satoshi'; src: url('/fonts/Satoshi-Italic.otf') format('opentype'); font-weight: 400; font-style: italic; }
+@font-face { font-family: 'Satoshi'; src: url('/fonts/Satoshi-Medium.otf') format('opentype'); font-weight: 500; font-style: normal; }
+@font-face { font-family: 'Satoshi'; src: url('/fonts/Satoshi-MediumItalic.otf') format('opentype'); font-weight: 500; font-style: italic; }
+@font-face { font-family: 'Satoshi'; src: url('/fonts/Satoshi-Bold.otf') format('opentype'); font-weight: 700; font-style: normal; }
+@font-face { font-family: 'Satoshi'; src: url('/fonts/Satoshi-BoldItalic.otf') format('opentype'); font-weight: 700; font-style: italic; }
+@font-face { font-family: 'Satoshi'; src: url('/fonts/Satoshi-Black.otf') format('opentype'); font-weight: 900; font-style: normal; }
+@font-face { font-family: 'Satoshi'; src: url('/fonts/Satoshi-BlackItalic.otf') format('opentype'); font-weight: 900; font-style: italic; }
+@font-face { font-family: 'Satoshi'; src: url('/fonts/Satoshi-Light.otf') format('opentype'); font-weight: 300; font-style: normal; }
+@font-face { font-family: 'Satoshi'; src: url('/fonts/Satoshi-LightItalic.otf') format('opentype'); font-weight: 300; font-style: italic; }
+
+/* Genel Breadcrumb */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Ana elemanlar arası boşluk */
+    padding: 0 60px;
+    max-width: 1250px;
+    margin: 29.5px auto 0 auto;
+    font-family: Satoshi, sans-serif;
+    
+}
+
+/* Her bir öğe */
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+    gap: 4px; /* Metin ile ikon arası boşluk */
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.breadcrumb-item a {
+    color: rgba(0, 0, 0, 0.60); /* İlk 3 elemanın rengi */
+    text-decoration: none; /* Alt çizgiyi kaldır */
+    transition: color 0.3s ease; /* Hover efekti için geçiş */
+}
+
+.breadcrumb-item a:hover {
+    color: rgba(0, 0, 0, 0.8); /* Hover sırasında renk değişimi */
+}
+
+.breadcrumb-item:last-child a {
+    color: #000; /* Son eleman için özel renk */
+    pointer-events: none; /* Tıklanamaz hale getir */
+    cursor: default; /* İmleç değiştirme */
+}
+
+/* SVG boyutu */
+.breadcrumb-item svg {
+    width: 16px;
+    height: 16px;
+}
+
+@media (max-width: 767px) {
+    .breadcrumb {
+        margin-top: 48px;
+    }
+}

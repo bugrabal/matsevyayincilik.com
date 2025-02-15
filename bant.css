@@ -1,0 +1,62 @@
+/*********************************************
+ * HAREKETLİ BANT (Kesintisiz Marquee)
+ *********************************************/
+
+/* Ana alan */
+.marquee-section {
+    width: 100%; /* Genişlik tam ekran */
+    height: 164px; /* Masaüstü için yükseklik */
+    background: #A21E7E; /* Arka plan rengi: A21E7E */
+    overflow: hidden; /* Yazılar taşmasın */
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* İçerik alanı */
+.marquee-content {
+    display: flex;
+    gap: 35px; /* Yazılar arası boşluk */
+    animation: marquee 180s linear infinite; /* Sonsuz döngü animasyonu */
+    white-space: nowrap; /* Tek satırda yaz */
+    will-change: transform; /* Performans için */
+}
+
+/* Yazılar */
+.marquee-content span {
+    font-family: "GT Walsheim Pro";
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 95px;
+    color: #F9CA36; /* Yazı rengi: F9CA36 */
+}
+
+/* Marquee Animasyonu */
+@keyframes marquee {
+    from {
+      transform: translateX(0); /* Başlangıç */
+    }
+    to {
+      transform: translateX(-100%); /* Yazılar sola kayar */
+    }
+}
+
+/* Mobil için düzenleme */
+@media (max-width: 767px) {
+    .marquee-section {
+      height: 60px; /* Mobil için yükseklik */
+    }
+  
+    .marquee-content {
+      gap: 16px; /* Mobilde yazılar arası boşluk */
+      animation: marquee 120s linear infinite; /* Mobilde hız daha yüksek */
+    }
+  
+    .marquee-content span {
+      font-size: 40px; /* Mobil yazı boyutu */
+      line-height: 95px; /* Mobil line-height */
+      text-align: center; /* Yazıları ortala */
+      color: #F9CA36; /* Yazı rengi */
+    }
+}

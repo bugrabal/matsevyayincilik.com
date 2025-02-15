@@ -1,0 +1,231 @@
+/* ======================================
+   TEMEL TASARIM (Desktop - 1124px)
+   ====================================== */
+   .subscription {
+    display: flex;
+    width: 1124px;
+    padding: 36px 64px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    background: #A21E7E;
+    margin: 64px auto 32px auto;
+  }
+  
+  .subscription-text {
+    width: 551px;
+    height: 94px;
+    color: #FFF;
+    font-family: "GT Walsheim Pro", sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 45px;
+  }
+  
+  .subscription-text .highlight {
+    color: #F9CA36;
+  }
+  
+  .subscription-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  
+  .email-input {
+    display: flex;
+    width: 349px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 12px;
+    border-radius: 62px;
+    background: #FFF;
+  }
+  
+  .email-text {
+    font-family: Satoshi, sans-serif;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.40);
+    line-height: normal;
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+  }
+  
+  .subscribe-button {
+    display: flex;
+    width: 349px;
+    padding: 12px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border-radius: 62px;
+    background: #F9CA36;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .subscribe-button:hover {
+    background: #e8b235;
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  
+  .subscribe-button span {
+    color: #000;
+    font-family: Satoshi, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  /* Hata Popup */
+  #error-popup {
+    position: fixed;
+    top: -100px; /* Başlangıçta görünmez */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: top 0.5s ease;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+  }
+  
+  #error-popup.show {
+    top: 20px;
+  }
+  
+  /* ======================================
+     MEDIA QUERIES
+     (Eleman oranları korunarak, sağ ve soldan sabit boşluk bırakılıyor)
+     ====================================== */
+  
+  /* 1. max-width: 1200px */
+  @media screen and (max-width: 1200px) {
+    .subscription {
+      width: 95%;
+      max-width: 1124px;
+      padding: 32px 56px;
+      /* Sağ ve solda minimum 20px boşluk */
+      margin: 64px 20px 32px;
+    }
+    .subscription-text {
+      width: 500px;
+      font-size: 36px;
+      line-height: 40px;
+    }
+    .email-input,
+    .subscribe-button {
+      width: 310px;
+      padding: 10px 14px;
+    }
+    .subscribe-button span {
+      font-size: 14px;
+    }
+  }
+  
+  /* 2. max-width: 1020px */
+  @media screen and (max-width: 1020px) {
+    .subscription {
+      width: 90%;
+      max-width: 1020px;
+      padding: 28px 48px;
+      margin: 64px 20px 32px;
+    }
+    .subscription-text {
+      width: 480px;
+      font-size: 32px;
+      line-height: 36px;
+    }
+    .email-input,
+    .subscribe-button {
+      width: 280px;
+      padding: 9px 12px;
+    }
+    .subscribe-button span {
+      font-size: 14px;
+    }
+  }
+  
+  /* 3. max-width: 768px */
+  @media screen and (max-width: 768px) {
+    .subscription {
+      flex-direction: column;
+      width: 90%;
+      max-width: 768px;
+      padding: 24px 40px;
+      margin: 64px 20px 32px;
+      text-align: center;
+    }
+    .subscription-text {
+      width: 100%;
+      font-size: 28px;
+      line-height: 32px;
+      margin-bottom: 20px;
+    }
+    .subscription-form {
+      width: 100%;
+      align-items: center;
+    }
+    .email-input,
+    .subscribe-button {
+      width: 100%;
+      max-width: 349px; /* Orijinal ebat korunuyor */
+      padding: 10px 14px;
+    }
+    .subscribe-button span {
+      font-size: 14px;
+    }
+  }
+  
+  /* 4. max-width: 600px */
+  @media screen and (max-width: 600px) {
+    .subscription {
+      width: 95%;
+      max-width: 600px;
+      padding: 20px 30px;
+      margin: 64px 20px 32px;
+    }
+    .subscription-text {
+      font-size: 24px;
+      line-height: 28px;
+    }
+    .email-input,
+    .subscribe-button {
+      width: 100%;
+      max-width: 320px;
+      padding: 8px 12px;
+    }
+    .subscribe-button span {
+      font-size: 14px;
+    }
+  }
+  
+  /* 5. max-width: 480px */
+  @media screen and (max-width: 480px) {
+    .subscription {
+      width: 95%;
+      max-width: 480px;
+      padding: 16px 20px;
+      margin: 64px 20px 32px;
+    }
+    .subscription-text {
+      font-size: 20px;
+      line-height: 24px;
+    }
+    .email-input,
+    .subscribe-button {
+      width: 100%;
+      max-width: 280px;
+      padding: 6px 10px;
+    }
+    .subscribe-button span {
+      font-size: 12px;
+    }
+  }
+  

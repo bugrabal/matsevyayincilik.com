@@ -1,0 +1,229 @@
+/* Satoshi Font Tanımları */
+@font-face {
+    font-family: 'Satoshi';
+    src: url('/fonts/Satoshi-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('/fonts/Satoshi-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('/fonts/Satoshi-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'GTWalsheimPro-Bold';
+    src: url('fonts/GTWalsheimPro-Bold.ttf') format('truetype');
+  }
+  
+  
+  /* Genel SSS Alanı */
+  .sss-section {
+    max-width: 1440px; /* Desktop için tasarım genişliği */
+    margin: 50px auto; /* Ortalanmış görünüm */
+    padding: 0 60px; /* Kenarlardan boşluk */
+    box-sizing: border-box;
+  }
+  
+  /* Başlık */
+  .sss-title {
+    font-family: "GT Walsheim Pro", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #1e1e1e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+  }
+  
+  .sss-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #1e1e1e;
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+  
+  /* SSS Soruları ve Cevaplar Alanı */
+  .sss-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  /* Soru Alanı */
+  .sss-item {
+    background: #f9f9f9;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .sss-item:hover {
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+  }
+  
+  /* Soru Çubuğu */
+  .sss-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .sss-question span {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #1e1e1e;
+    transition: color 0.3s ease;
+  }
+  
+  .sss-question:hover span {
+    color: #A21E7E; /* Hover sırasında mavi renk */
+  }
+  
+  /* İkon (Dönme Efekti) */
+  .sss-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Yumuşak dönüş */
+  }
+  
+  .sss-item.active .sss-icon {
+    transform: rotate(180deg); /* Aşağı doğru dönüş */
+  }
+  
+  /* Cevap Alanı */
+  .sss-answer {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #555;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0; /* İlk başta görünmez */
+    transform: translateY(-10px); /* Hafif yukarıda başlar */
+    transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .sss-item.active .sss-answer {
+    max-height: 200px; /* Açıldığında maksimum yükseklik */
+    opacity: 1; /* Görünür olur */
+    transform: translateY(0); /* Yumuşakça aşağı iner */
+  }
+  
+  /* Responsive Media Queries */
+  
+  /* 1. Geniş Ekranlar (1440px üzeri) */
+  @media (min-width: 1440px) {
+    .sss-title {
+      font-size: 36px;
+    }
+  
+    .sss-item {
+      padding: 20px 24px;
+    }
+  
+    .sss-question span {
+      font-size: 20px;
+    }
+  
+    .sss-answer {
+      font-size: 18px;
+    }
+  }
+  
+  /* 2. Tablet (1024px - 1439px) */
+  @media (max-width: 1439px) and (min-width: 1024px) {
+    .sss-title {
+      font-size: 30px;
+    }
+  
+    .sss-item {
+      padding: 16px 20px;
+    }
+  
+    .sss-question span {
+      font-size: 18px;
+    }
+  
+    .sss-answer {
+      font-size: 16px;
+    }
+  }
+  
+  /* 3. Küçük Tablet ve Büyük Telefonlar (768px - 1023px) */
+  @media (max-width: 1023px) and (min-width: 768px) {
+    .sss-title {
+      font-size: 26px;
+      margin-bottom: 30px;
+    }
+  
+    .sss-item {
+      padding: 14px 18px;
+    }
+  
+    .sss-question span {
+      font-size: 16px;
+    }
+  
+    .sss-answer {
+      font-size: 15px;
+    }
+  }
+  
+  /* 4. Küçük Telefonlar (480px - 767px) */
+  @media (max-width: 767px) and (min-width: 480px) {
+    .sss-title {
+      font-size: 24px;
+    }
+  
+    .sss-item {
+      padding: 12px 16px;
+    }
+  
+    .sss-question span {
+      font-size: 14px;
+    }
+  
+    .sss-answer {
+      font-size: 14px;
+    }
+  }
+  
+  /* 5. Çok Küçük Telefonlar (480px altı) */
+  @media (max-width: 479px) {
+    .sss-title {
+      font-size: 22px;
+    }
+  
+    .sss-item {
+      padding: 10px 14px;
+    }
+  
+    .sss-question span {
+      font-size: 12px;
+    }
+  
+    .sss-answer {
+      font-size: 12px;
+    }
+  }
+  

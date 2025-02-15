@@ -1,0 +1,43 @@
+.contract-container {
+    width: 1250px;
+    margin: 0 auto;
+    padding: 40px;
+    font-family: 'Satoshi', sans-serif;
+    /* Kare görünüm oluşturan arka plan, border, border-radius veya box-shadow eklenmedi */
+  }
+  
+  .contract-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1e1e1e;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  .contract-heading {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e1e1e;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .contract-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 16px;
+  }
+  
+  .contract-text a {
+    color: #A21E7E;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .contract-text a:hover {
+    text-decoration: underline;
+  }
+  

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Satoshi:wght@400;500&display=swap');
+
+/* Genel Ayarlar */
+.navigation-tabs-container {
+  max-width: 1250px;
+  margin: 80px auto;
+  padding: 0 60px;
+}
+
+/* Sekme Başlıkları */
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  gap: 286px;
+}
+
+.tab {
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  background: none;
+  transition: color 0.3s ease;
+}
+
+.tab.active {
+  color: #000;
+  font-weight: 500;
+  border-bottom: 2px solid #000;
+}
+
+.tab:hover {
+  color: #000;
+}
+
+/* Alt Çizgi */
+.tabs-line {
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  margin-top: 24px;
+}
+
+/* İçerik Konteyneri */
+.tab-contents {
+  position: relative;
+  max-width: 1440px;
+  margin: 24px auto 0;
+  overflow: hidden;
+  height: auto;
+}
+
+.tab-content {
+  display: none;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Fade-in animasyonu */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet Cihazlar için (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .navigation-tabs-container {
+    padding: 0 40px; /* Kenarlardan daha az boşluk */
+  }
+  .tabs-container {
+    gap: 150px; /* Sekmeler arasındaki boşluğu azalt */
+  }
+  .tab {
+    font-size: 18px; /* Daha küçük font boyutu */
+    padding: 8px 16px; /* Sekme içindeki boşluğu daralt */
+  }
+}
+
+/* Genel Mobil Cihazlar için (max-width: 767px) */
+@media (max-width: 767px) {
+  .navigation-tabs-container {
+    padding: 0 20px; /* Daha dar kenar boşlukları */
+  }
+  .tabs-container {
+    flex-direction: column; /* Sekmeleri dikey hizala */
+    gap: 16px; /* Sekmeler arasında daha az boşluk */
+  }
+  .tab {
+    font-size: 16px; /* Daha küçük font boyutu */
+    text-align: center; /* Sekme yazılarını ortala */
+  }
+  .tabs-line {
+    display: none; /* Alt çizgiyi gizle */
+  }
+  .tab-content {
+    padding: 20px; /* İçerik için ek boşluk */
+  }
+}
+
+/* Küçük Mobil Cihazlar için (max-width: 480px) */
+@media (max-width: 480px) {
+  .navigation-tabs-container {
+    padding: 0 10px; /* Kenar boşluklarını daha da daralt */
+  }
+  .tabs-container {
+    gap: 8px; /* Sekmeler arası daha küçük boşluk */
+  }
+  .tab {
+    font-size: 14px; /* En küçük ekranlar için font boyutu */
+  }
+  .tab-content {
+    font-size: 14px; /* İçerik metinlerini de küçült */
+    line-height: 1.4; /* Daha rahat okuma */
+  }
+}

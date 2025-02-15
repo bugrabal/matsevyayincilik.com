@@ -1,0 +1,365 @@
+/* ========================= */
+/* Ana Bölüm: Örnek Kitap Formu */
+/* ========================= */
+
+/* Main Container: Tasarım referansı 1440px olsa da, merkezleniyor */
+.main-container {
+  position: relative;
+  width: 1250px;
+  height: 419px; /* İç kapsayıcı yüksekliği */
+  margin: 0 auto;
+}
+::-webkit-scrollbar {
+  width: 8px; /* Scroll çubuğu genişliği */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Scroll çubuğu arka planı */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A21E7E; /* Scroll çubuğu rengi */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #702b5d; /* Üzerine gelince renk değişimi */
+}
+
+/* Background Box: Arka plandaki kutu, ölçüler 1247×287px, arka plan rengi #A21E7E */
+.background-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1250px;
+  height: 287px;
+  border-radius: 24px;
+  background-color: #A21E7E;
+  scale: 1;
+}
+
+/* Content Box: Üstteki katman; içeriğin taşmasını önlemek için border-radius & overflow kullanılıyor */
+.content-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1250px;
+  height: 419px;
+  border-radius: 24px;
+  overflow: hidden;
+  scale: 1;
+}
+
+/* --- Kitap Görselleri --- */
+/* Book Image 1 (arka planda kalan) */
+.book-image-1 {
+  position: absolute;
+  left: 588px;
+  top: -48px;
+  width: 600.682px;
+  height: 598px;
+  flex-shrink: 0;
+}
+
+/* Book Image 2 (öne çıkan) */
+.book-image-2 {
+  position: absolute;
+  left: 770px;
+  top: -11px;
+  width: 600.682px;
+  height: 598px;
+  flex-shrink: 0;
+}
+
+/* --- Yuvarlak Şekil --- */
+/* Circle Wrapper: Yuvarlağın kapsayıcısı, taşmaları gizler */
+.circle-wrapper {
+  position: absolute;
+  top: 74px;
+  left: 714px;
+  width: 566.181px;
+  height: 566.181px;
+  overflow: hidden;
+}
+
+/* Circle Element: Döndürülmüş yuvarlak, linear gradient arka plan */
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 566.181px;
+  height: 566.181px;
+  transform: rotate(13.458deg);
+  background: linear-gradient(331deg, rgba(37, 24, 24, 0.75) 40.01%, rgba(0, 0, 0, 0.04) 54.43%, rgba(0, 0, 0, 0.04) 67.26%);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* --- Logo --- */
+.brand-logo {
+  position: absolute;
+  left: 972px;
+  top: 351px;
+  right: 48px;
+  bottom: 32px;
+  width: 226px;
+  height: 36px;
+  background: url("images/logo.png") center/cover no-repeat;
+  box-shadow: 8px 13px 9.7px -3px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+}
+
+/* --- Metinler --- */
+/* Title */
+.title {
+  position: absolute;
+  top: 197px;
+  left: 59px;
+  right: 626px;
+  bottom: 160px;
+  
+  color: #FFF;
+  font-family: "GT Walsheim Pro", sans-serif;
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 61.6px;
+  letter-spacing: -0.2px;
+}
+
+/* Description */
+.description {
+  position: absolute;
+  top: calc(197px + 61.6px + 17.29px); /* Başlık yüksekliği + 17.29px boşluk */
+  left: 62px;
+  width: 608px;
+  color: #FFF;
+  font-family: "GT Walsheim Pro", sans-serif;
+  font-size: 34.934px;
+  font-weight: 500;
+  line-height: 38.428px;
+  letter-spacing: -0.125px;
+  text-align: left;
+}
+
+.description a {
+  color: #F9CA36;
+  text-decoration: none;
+  
+}
+
+
+.main-container2 {
+  display: flex;
+  gap: 32px; /* İki kutu arasındaki boşluk */
+  align-items: flex-start; /* Kutuların üst kenarlarının hizalanması (isteğe bağlı) */
+  margin: 32px auto;
+  max-width: 1250px;
+}
+
+.left-extra-box {
+  position: relative;
+  width: 700px;
+  height: 350px;
+  flex-shrink: 0;
+  border-radius: 32px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Arka plan: Sarı tonlarda gradient */
+  background: linear-gradient(145deg, #FFDD57, #FFC107);
+  cursor: pointer; 
+}
+
+/* Canvas, left-extra-box'ı tamamen kaplayacak */
+.topography-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Canvas fare olaylarına müdahale etmesin */
+  z-index: 0;
+}
+
+.bizimle {
+  position: relative;
+  width: 1250px;
+  margin: 32px auto 108px auto; /* Mevcut yapıdan 32px aşağıya yerleşecek */
+}
+
+.bizimle__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Üstteki Yazı */
+.bizimle__title {
+  position: absolute;
+  top: 55.47px;        /* Fotoğrafın üst noktasından 55.47px aşağıda */
+  left: 67.19px;       /* Fotoğrafın solundan 67.19px içeride */
+  width: 619.531px;
+  color: #FFF;
+  font-family: "GT Walsheim Pro", sans-serif;
+  font-size: 66.319px;
+  font-style: normal;
+  font-weight: 880;
+  line-height: 67.188px;
+  letter-spacing: -0.237px;
+  margin: 0;
+  text-align: left;
+}
+
+/* Alt Metin */
+.bizimle__subtitle {
+  position: absolute;
+  /* Üst yazının konumundan 8px aşağıda: 55.47px + 67.188px + 8px */
+  top: 198.50px;
+  left: 67.19px;
+  color: #FFF;
+  font-family: "GT Walsheim Pro", sans-serif;
+  font-size: 27.292px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30.022px;
+  letter-spacing: -0.097px;
+  margin: 0;
+}
+
+/* Link Stili */
+.bizimle__link {
+  color: #F9CA36; /* Varsayılan sarı renk */
+  text-decoration: underline;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; /* Hover animasyonu için */
+  text-decoration: none;
+}
+
+
+
+
+
+/* Üstteki Başlık ("Akıllı Tahta Uygulaması") */
+.left-extra-box__heading {
+  color: #111;
+  font-family: "GT Walsheim Pro", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 36px; /* %90 */
+  text-align: center;
+  /* Başlık ile metin arasına 18px boşluk bırakmak için */
+  margin-bottom: 18px;
+  margin-top: 12px;
+  
+}
+
+/* Alt Metin ("Akıllı tahta uygulamamız için lütfen tıklayınız") */
+.left-extra-box__text {
+  color: rgba(17, 17, 17, 0.60);
+  text-align: center;
+  font-family: "GT Walsheim Pro", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* %100 */
+  margin: 0;
+}
+
+.left-extra-box__heading,
+.left-extra-box__text {
+  /* Soft geçiş için transform özelliklerinde 0.5 saniyelik ease-in-out animasyon */
+  transition: transform 0.5s ease-in-out;
+}
+
+.left-extra-box:hover .left-extra-box__heading,
+.left-extra-box:hover .left-extra-box__text {
+  transform: scale(1.05);
+}
+
+/* ******************** */
+/* Mor Kutu (Purple Box) */
+/* ******************** */
+.purple-box {
+  position: relative;
+  width: 518px;
+  height: 350px;
+  flex-shrink: 0;
+  border-radius: 32px;
+  background: #A21E7E;
+  overflow: hidden;
+  cursor: pointer; 
+}
+
+/* SVG Konteyneri */
+.svg-container {
+  position: absolute;
+  left: 123.35px;
+  top: 38.26px;
+  width: 587.07px;
+  height: 276.212px;
+  transform: rotate(-4.591deg);
+  flex-shrink: 0;
+  transition: transform 0.3s ease-in-out;
+}
+  
+/* Mor Kutudaki Metin Bloğu – Konumlandırma */
+.purple-box__text {
+  position: absolute;
+  left: 48px;
+  right: 24px;
+  bottom: 96px;
+  transition: transform 0.3s ease-in-out;
+}
+  
+/* Üstteki Başlık: "Bayilerimiz" */
+.purple-box__title {
+  color: #FFF;
+  font-family: "GT Walsheim Pro", sans-serif;
+  font-size: 39.562px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 43.518px;
+  letter-spacing: -0.141px;
+  margin: 0;
+  transition: transform 0.3s ease-in-out;
+}
+  
+/* Alt Başlık: "İlinizdeki bayiyi bulmak için haritadan seçim yapınız." */
+.purple-box__subtitle {
+  width: 282px;
+  color: #FFF;
+  font-family: "GT Walsheim Pro", sans-serif;
+  font-size: 24.68px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27.148px;
+  letter-spacing: -0.088px;
+  margin-top: 18px;
+  transition: transform 0.3s ease-in-out;
+}
+  
+.purple-box__subtitle .highlight {
+  color: #F9CA36;
+}
+  
+/* Hover Efekti */
+.purple-box:hover .svg-container {
+  transform: rotate(-4.591deg) scale(1.05);
+}
+  
+/* Hem .purple-box hem .left-extra-box için yumuşak geçiş ayarı */
+.purple-box,
+.left-extra-box {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover durumunda her iki öğe de %5 oranında büyüyecek */
+.purple-box:hover,
+.left-extra-box:hover {
+  transform: scale(1.05);
+}
+

@@ -1,0 +1,75 @@
+/***********************************************
+ * Yorum Kartı - Bizim Tasarımımıza Uygun CSS
+ ***********************************************/
+
+/* Yorum Kartlarını Kapsayan Container (2x2 grid düzeninde, örneğin) */
+.yorum-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px 20px; /* 28px dikey, 20px yatay boşluk */
+    justify-content: center;
+    padding: 0;
+    margin: 36px auto 0;
+  }
+  
+  /* Tek Yorum Kartı */
+  .yorum {
+    display: flex;
+    flex-direction: column;
+    width: 610px;           /* Önceki tasarımda belirtilen genişlik */
+    padding: 28px 32px;     /* İç boşluk */
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    box-sizing: border-box;
+    gap: 15px;              /* Elemanlar arası boşluk */
+    justify-content: flex-start;
+  }
+  
+  /* Yıldızlar (Yorumun en üstünde yer alır) */
+  .stars {
+    display: flex;
+    gap: 8px; /* Yıldızlar arası 8px boşluk */
+  }
+  
+  .stars svg {
+    width: 22.579px;
+    height: 22.579px;
+    fill: #FFC633;
+  }
+  
+  /* Yorum Sahibi İsim (Yıldızlardan 16px aşağıda) */
+  .yorum-isim {
+    margin-top: 16px;
+    color: #000;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; /* %110 */
+  }
+  
+  /* Yorum Metni (İsimden 12px aşağıda) */
+  .yorum-metni {
+    margin-top: 12px;
+    align-self: stretch;
+    color: rgba(0, 0, 0, 0.60);
+    font-family: "Satoshi", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* %137.5 */
+  }
+  
+  /* Yorum Tarihi (Yorum metninden 24px aşağıda) */
+  .yorum-tarih {
+    margin-top: 24px;
+    width: 546px;
+    flex-shrink: 0;
+    color: rgba(0, 0, 0, 0.60);
+    font-family: "Satoshi", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* %137.5 */
+  }
+  

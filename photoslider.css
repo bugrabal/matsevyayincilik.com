@@ -1,0 +1,213 @@
+/* ---------------- SLIDER ALANI ---------------- */
+.photo-slider {
+    width: 1250px;
+    height: 512px;
+    border-radius: 24px;
+    background: #A21E7E;
+    margin: 36px auto 64px auto; 
+    position: relative;
+    /* Search sonuçları taşabilsin diye 'visible' */
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .photo-container: fotoğrafları üst üste getireceğiz */
+.photo-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Her .photo üst üste, başlangıçta gizli */
+.photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+/* Sadece aktif olan fotoğraf görünür */
+.photo.active {
+    display: block; /* İstersen display: flex; kullanabilirsin, ancak Search Bar'ın mutlak konumunu bozabilir */
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+/* Dot Navigation */
+.photo-navigation {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #fff;
+}
+
+/* 1440px üzeri ekranlar için ortada kalsın */
+@media (min-width: 1441px) {
+    .photo-slider {
+        max-width: 1248px;
+    }
+}
+
+/* ---------------- ARAMA ÇUBUĞU ---------------- */
+.search-bar {
+    position: absolute;
+    left: 48px;
+    bottom: 126px;
+    width: 449px;
+    height: 64px;
+    background: #FFF;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 10;
+  }
+  
+  .search-bar input[type="text"] {
+    flex: 1;
+    height: 100%;
+    border: none;
+    outline: none;
+    margin-left: 18px;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(30, 30, 30, 0.5);
+  }
+  
+  .search-bar input[type="text"]:-webkit-autofill {
+    box-shadow: inset 0 0 0 1000px #fff !important;
+    -webkit-text-fill-color: rgba(30, 30, 30, 0.5) !important;
+  }
+  
+  .search-bar input[type="text"]:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  .search-btn {
+    width: 48px;
+    height: 48px;
+    background: #F9CA36;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  
+
+/* ---------------- OTOMATİK TAMAMLAMA (Search Results) ---------------- */
+.search-results {
+    position: absolute;
+    top: 64px; 
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-height: 250px; 
+    overflow-y: auto;
+    display: none; /* Başlangıçta kapalı */
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+.search-result-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.search-result-item:hover {
+    background-color: #f2f2f2;
+}
+
+.search-result-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.search-result-title {
+    font-size: 16px;
+    color: #1e1e1e;
+}
+
+/* Scrollbar (Chrome/Safari) */
+.search-results::-webkit-scrollbar {
+    width: 8px;
+}
+
+.search-results::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+    background: #A21E7E;
+    border-radius: 10px;
+}
+
+.search-results::-webkit-scrollbar-thumb:hover {
+    background: #702b5d;
+}
+
+.photo-icons2 {
+    position: absolute;
+    top: 80%; /* İstediğin konuma göre değiştir */
+    left: 16.7%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    gap: 12px;
+    pointer-events: auto;
+  }
+  
+  
+  .photo-icons2 .icon-link {
+    pointer-events: auto;}
+  
+  .photo-icons2 .left-icon {
+    top: 10%;
+    left: 10%;
+   
+  }
+  
+  .photo-icons2 .right-icon {
+    top: 10%;
+    right: 10%;
+  }
+
+  

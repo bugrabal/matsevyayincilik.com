@@ -1,0 +1,361 @@
+/* ===============================
+   TEMEL STİLLER (Desktop)
+   =============================== */
+
+/* Ana kapsayıcı DIV */
+.mac-hero {
+  position: relative;
+  width: 100%;
+  height: 710px; /* İhtiyacınıza göre ayarlayabilirsiniz */
+}
+
+/* Arka plan alanı */
+.mac-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 710.59px;
+  background: linear-gradient(180deg, #A21E7E 16.17%, #F9CA36 76.17%);
+  z-index: 1;
+}
+
+/* Üstte yer alan yazı */
+.mac-header-text {
+  position: absolute;
+  top: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #FFFBFB;
+  text-align: center;
+  font-family: "GT Walsheim Pro", sans-serif;
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 61.6px;
+  letter-spacing: -0.2px;
+  z-index: 3;
+}
+
+/* Macbook fotoğrafını içeren kapsayıcı (yazıdan 52px sonra başlar) */
+.mac-macbook-container {
+  position: absolute;
+  top: calc(36px + 61.6px + 52px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+
+/* Macbook mockup fotoğrafı */
+.mac-macbook-photo {
+  position: relative;
+  width: 733px;
+  height: 450px;
+  margin-top: 64px;
+  background: url("images/mac.png") no-repeat center;
+  background-size: 100% 99.579%;
+}
+
+/* Videoların döneceği alan (macbook ekranı içi) */
+.mac-video-container {
+  position: absolute;
+  top: 10.78px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 601px;
+  height: 389px;
+  border-radius: 12px 12px 0 0;
+  background: #D9D9D9;
+  overflow: hidden;
+  z-index: 2;
+}
+
+/* Video elementleri */
+.mac-video {
+  width: 100%;
+  height: 100%;
+  display: none; /* Başlangıçta görünmez */
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.mac-video.active {
+  display: block;
+}
+
+/* Ses aç/kapa butonu (video alanı üzerinde) */
+.mac-mute-toggle {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.mac-mute-toggle:hover {
+  background: rgba(0, 0, 0, 0.7);
+  transform: scale(1.05);
+}
+
+/* Hizmetler okları kapsayıcısı */
+.hizmetler-arrows {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Ortak buton stili */
+.hizmetler-arrows button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #FFF;
+  border: 1px solid rgba(25, 24, 37, 0.10);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.hizmetler-arrows button:hover {
+  background: #f0f0f0;
+  transform-origin: center center;
+}
+
+/* Sol buton: Mac fotoğrafından 32px içeride */
+.hizmetler-arrows .left {
+  left: -32px;
+}
+
+/* Sağ buton: Mac fotoğrafından 32px içeride */
+.hizmetler-arrows .right {
+  right: -32px;
+}
+
+
+/* ===============================
+   RESPONSIVE STİLLER
+   =============================== */
+
+/* max-width: 1200px */
+@media screen and (max-width: 1200px) {
+  .mac-hero {
+    height: 650px;
+  }
+  .mac-background {
+    height: 650px;
+  }
+  .mac-header-text {
+    top: 30px;
+    font-size: 48px;
+    line-height: 52px;
+  }
+  .mac-macbook-container {
+    top: calc(30px + 52px + 52px);
+  }
+  .mac-macbook-photo {
+    width: 650px;
+    height: 400px;
+    margin-top: 50px;
+    background-size: cover;
+  }
+  .mac-video-container {
+    width: 540px;
+    height: 350px;
+    top: 10px;
+  }
+  .mac-mute-toggle {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+  .hizmetler-arrows button {
+    width: 42px;
+    height: 42px;
+  }
+  .hizmetler-arrows .left {
+    left: -28px;
+  }
+  .hizmetler-arrows .right {
+    right: -28px;
+  }
+}
+
+/* max-width: 1020px */
+@media screen and (max-width: 1020px) {
+  .mac-hero {
+    height: 600px;
+  }
+  .mac-background {
+    height: 600px;
+  }
+  .mac-header-text {
+    top: 28px;
+    font-size: 44px;
+    line-height: 48px;
+  }
+  .mac-macbook-container {
+    top: calc(28px + 48px + 52px);
+  }
+  .mac-macbook-photo {
+    width: 600px;
+    height: 370px;
+    margin-top: 45px;
+  }
+  .mac-video-container {
+    width: 520px;
+    height: 340px;
+    top: 10px;
+  }
+  .mac-mute-toggle {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+  .hizmetler-arrows button {
+    width: 40px;
+    height: 40px;
+  }
+  .hizmetler-arrows .left {
+    left: -24px;
+  }
+  .hizmetler-arrows .right {
+    right: -24px;
+  }
+}
+
+/* max-width: 768px */
+@media screen and (max-width: 768px) {
+  .mac-hero {
+    height: 500px;
+  }
+  .mac-background {
+    height: 500px;
+  }
+  .mac-header-text {
+    top: 20px;
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .mac-macbook-container {
+    top: calc(20px + 40px + 52px);
+  }
+  .mac-macbook-photo {
+    width: 500px;
+    height: 310px;
+    margin-top: 30px;
+  }
+  .mac-video-container {
+    width: 420px;
+    height: 290px;
+    top: 8px;
+  }
+  .mac-mute-toggle {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+  .hizmetler-arrows button {
+    width: 36px;
+    height: 36px;
+  }
+  .hizmetler-arrows .left {
+    left: -20px;
+  }
+  .hizmetler-arrows .right {
+    right: -20px;
+  }
+}
+
+/* max-width: 600px */
+@media screen and (max-width: 600px) {
+  .mac-hero {
+    height: 450px;
+  }
+  .mac-background {
+    height: 450px;
+  }
+  .mac-header-text {
+    top: 18px;
+    font-size: 32px;
+    line-height: 36px;
+  }
+  .mac-macbook-container {
+    top: calc(18px + 36px + 52px);
+  }
+  .mac-macbook-photo {
+    width: 420px;
+    height: 280px;
+    margin-top: 25px;
+  }
+  .mac-video-container {
+    width: 360px;
+    height: 260px;
+    top: 8px;
+  }
+  .mac-mute-toggle {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+  .hizmetler-arrows button {
+    width: 32px;
+    height: 32px;
+  }
+  .hizmetler-arrows .left {
+    left: -16px;
+  }
+  .hizmetler-arrows .right {
+    right: -16px;
+  }
+}
+
+/* max-width: 480px */
+@media screen and (max-width: 480px) {
+  .mac-hero {
+    height: 400px;
+  }
+  .mac-background {
+    height: 400px;
+  }
+  .mac-header-text {
+    top: 16px;
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .mac-macbook-container {
+    top: calc(16px + 32px + 52px);
+  }
+  .mac-macbook-photo {
+    width: 360px;
+    height: 250px;
+    margin-top: 20px;
+  }
+  .mac-video-container {
+    width: 320px;
+    height: 220px;
+    top: 6px;
+  }
+  .mac-mute-toggle {
+    font-size: 9px;
+    padding: 3px 6px;
+  }
+  .hizmetler-arrows button {
+    width: 28px;
+    height: 28px;
+  }
+  .hizmetler-arrows .left {
+    left: -12px;
+  }
+  .hizmetler-arrows .right {
+    right: -12px;
+  }
+}

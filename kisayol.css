@@ -1,0 +1,200 @@
+/* Yazı Tipleri */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@font-face {
+  font-family: 'GTWalsheimPro-Bold';
+  src: url('fonts/GTWalsheimPro-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'IntegralCFBold';
+  src: url('fonts/IntegralCF-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Genel Stil */
+.kisayol-container {
+  text-align: center;
+  margin-bottom: 124px;
+  margin-top: 64px;
+}
+
+/* Başlıklar ve Açıklamalar */
+.kisayol-title {
+  color: #A21E7E;
+  font-family: 'IntegralCFBold', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
+  letter-spacing: -0.5px;
+  margin-bottom: 28px;
+  opacity: 0;
+  animation: slideInFromBottom 0.8s ease-out forwards 0.2s;
+}
+
+.kisayol-sub-title {
+  color: #2D2323;
+  font-family: "GT Walsheim Pro";
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 61.6px;
+  letter-spacing: -0.2px;
+  margin-bottom: 19.59px;
+  opacity: 0;
+  animation: slideInFromBottom 0.8s ease-out forwards 0.4s;
+}
+
+.kisayol-description {
+  color: #2D2323;
+  font-family: Inter, sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 33.6px;
+  margin-bottom: 64px;
+  opacity: 0;
+  animation: slideInFromBottom 0.8s ease-out forwards 0.6s;
+}
+
+/* Kutular */
+.kisayol-box-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  overflow: visible;
+}
+
+.kisayol-box {
+  width: 400px;
+  height: 495px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  opacity: 0;
+  animation: slideInFromBottom 0.8s ease-out forwards;
+}
+
+.kisayol-box-1 {
+  background-color: #A21E7E;
+  color: #FFF;
+  animation-delay: 0.8s;
+}
+
+.kisayol-box-2 {
+  background-color: #F9CA36;
+  color: #FFF;
+  animation-delay: 1s;
+}
+
+.kisayol-box-3 {
+  background-color: #A21E7E;
+  color: #FFF;
+  animation-delay: 1.2s;
+}
+
+.kisayol-box:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.kisayol-image1 {
+  width: 400px;
+  height: 320px;
+  border-radius: 20px;
+  background: url(images/egitimpanel.png) center / 92% 100% no-repeat;
+  margin-bottom: 36px;
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.kisayol-image2 {
+  width: 400px;
+  height: 320px;
+  border-radius: 20px;
+  background: url(images/ornek-kitaplar-kisayol.png) center / 82.5% 82.5% no-repeat;
+  margin-bottom: 36px;
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.kisayol-image3 {
+  width: 400px;
+  height: 320px;
+  border-radius: 20px;
+  background: url(images/yardim.png) center / 92% 100% no-repeat;
+  margin-bottom: 36px;
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.kisayol-image1:hover,
+.kisayol-image2:hover,
+.kisayol-image3:hover {
+  transform: scale(1.15);
+}
+
+.kisayol-box-title {
+  font-family: Inter;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 8px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.kisayol-box-title1 {
+  font-family: Inter;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 8px;
+  text-align: center;
+  color: #2D2323;
+}
+
+.kisayol-box-text {
+  font-family: Inter;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 28px;
+  max-width: 292px;
+  text-align: center;
+  margin-bottom: 48px;
+  transition: color 0.3s ease;
+}
+
+.kisayol-box-text1 {
+  font-family: Inter;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 28px;
+  max-width: 292px;
+  text-align: center;
+  margin-bottom: 48px;
+  color: #2D2323;
+}
+
+/* Hover Efektleri */
+.kisayol-box-title:hover,
+.kisayol-box-text:hover {
+  color: #FFD700;
+}
+
+.kisayol-box-title1:hover,
+.kisayol-box-text1:hover {
+  color: #A21E7E;
+}
+
+/* Giriş Animasyonu */
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

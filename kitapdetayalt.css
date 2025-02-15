@@ -1,0 +1,70 @@
+/* Genel Container Ayarları */
+.product-container {
+    font-family: 'Inter', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  /* Ürün Açıklaması */
+  .product-description {
+    margin-bottom: 30px;
+  }
+  
+  .product-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .product-description p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    color: #555;
+  }
+  
+  /* Kitap Detayları Bölümü */
+.book-details {
+    margin-top: 20px;
+  }
+  
+  /* Kitap Detayları Başlığı */
+  .details-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600; /* Orta kalınlık */
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Ayrım Çizgisi */
+  .details-divider {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+  }
+  
+  /* Detay Listesi */
+  .details-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Her Bir Detay Listesi Öğesi */
+  .details-list li {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; /* Normal */
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  /* Detay Listesi İçindeki Vurgulu Metin (Label) */
+  .details-list li span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600; /* Orta kalınlık */
+    margin-right: 5px;
+  }

@@ -1,0 +1,239 @@
+/* ======================================
+   TEMEL TASARIM (1440px) - SABİT KART EBATLARI
+   ====================================== */
+
+/* Ana Konteyner */
+.coksatanlar-container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 92px;
+}
+
+/* Üst Kısım: Başlık ve Buton */
+.coksatanlar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 46px;
+}
+
+.coksatanlar-title {
+    color: #191919;
+    text-align: center;
+    font-family: "GT Walsheim Pro", sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 61.6px;
+    letter-spacing: -0.2px;
+    margin: 0;
+}
+
+.coksatanlar-button {
+    display: flex;
+    width: 218px;
+    height: 32px;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    border: 1px solid #BD73E8;
+    background: #A21E7E;
+    cursor: pointer;
+    text-decoration: none;
+    color: #FFF;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.coksatanlar-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Kartlar Konteyneri */
+.coksatanlar-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    /* Geniş ekranda kartlar arasında boşluk */
+    justify-content: space-between;
+}
+
+/* Kart (sabit ebat: 293px genişlik) */
+.coksatanlar-card {
+    display: flex;
+    flex-direction: column;
+    width: 293px; /* Sabit genişlik */
+    padding-bottom: 20px;
+    border-radius: 14.235px;
+    background: #FFF;
+    box-shadow: 0px 4.745px 23.725px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+}
+
+.coksatanlar-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Kart içeriği: Görsel alan */
+.card-image {
+    position: relative;
+    width: 293px;
+    height: 275.206px;
+    background: #F0EEED;
+    margin-bottom: 18px;
+}
+
+.book-png {
+    position: absolute;
+    top: 50%;
+    left: 54%;
+    width: 293px;
+    height: 275.206px;
+    transform: translate(-50%, -50%);
+}
+
+.book-png img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+/* Kart Başlığı */
+.card-title {
+    color: #191825;
+    font-family: Inter, sans-serif;
+    font-size: 18.997px;
+    font-weight: 700;
+    line-height: 120%;
+    width: 255px;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+/* Kart Alt Yazısı */
+.card-subtitle {
+    color: #A21E7E;
+    font-family: Inter, sans-serif;
+    font-size: 13.384px;
+    font-weight: 700;
+    line-height: 160%;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* Reyting Alanı */
+.card-rating {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+.rating-value {
+    color: #FF5722;
+    font-family: Inter, sans-serif;
+    font-size: 17.102px;
+    font-weight: 700;
+    line-height: 120%;
+    margin-right: 6px;
+}
+
+.rating-star {
+    width: 17.846px;
+    height: 17.846px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating-star svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* ======================================
+   MEDIA QUERIES
+   ====================================== */
+
+/* 1. max-width: 1200px */
+@media screen and (max-width: 1200px) {
+    .coksatanlar-container {
+        max-width: 1200px;
+        padding: 0 30px;
+    }
+    /* Ekstra boşluk kalırsa kartlar ortalanır */
+    .coksatanlar-cards {
+        justify-content: center;
+    }
+}
+
+/* 2. max-width: 1020px */
+@media screen and (max-width: 1020px) {
+    .coksatanlar-container {
+        max-width: 1020px;
+        padding: 0 20px;
+    }
+    .coksatanlar-cards {
+        justify-content: center;
+    }
+}
+
+/* 3. max-width: 768px */
+@media screen and (max-width: 768px) {
+    .coksatanlar-container {
+        max-width: 768px;
+        padding: 0 15px;
+    }
+    .coksatanlar-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .coksatanlar-title {
+        font-size: 36px;
+        line-height: 45px;
+    }
+    .coksatanlar-button {
+        width: 180px;
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+    .coksatanlar-cards {
+        justify-content: center;
+    }
+}
+
+/* 4. max-width: 480px */
+@media screen and (max-width: 480px) {
+    .coksatanlar-container {
+        max-width: 480px;
+        padding: 0 10px;
+    }
+    .coksatanlar-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .coksatanlar-title {
+        font-size: 28px;
+        line-height: 35px;
+    }
+    .coksatanlar-button {
+        width: 160px;
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+    .coksatanlar-cards {
+        justify-content: center;
+    }
+}

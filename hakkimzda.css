@@ -1,0 +1,72 @@
+/* Genel Hakkımızda Konteynırı */
+.hakkimizda-container {
+    width: 1250px;
+    margin: 0 auto;
+    font-family: 'Satoshi', sans-serif;
+  }
+  
+  /* Blokların Ortak Yapısı */
+  .hakkimizda-block {
+    display: flex;
+    margin-bottom: 40px; /* Bloklar arası boşluk */
+  }
+  
+  /* Blok 1: Solda Fotoğraf, Sağda Yazılar */
+  .hakkimizda-block-first .hakkimizda-image {
+    width: 610px;
+    height: 538px;
+    border-radius: 24px;
+    overflow: hidden;
+    background-color: #ccc; /* Yer tutucu arka plan */
+  }
+  .hakkimizda-block-first .hakkimizda-text {
+    margin-left: 28px;
+    flex: 1; /* Kalan alanı kaplasın */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Yazılar üstten hizalı */
+    padding-top: 0;
+  }
+  
+  /* Blok 2: Solda Yazılar, Sağda Fotoğraf */
+  .hakkimizda-block-second .hakkimizda-text {
+    margin-right: 28px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Yazılar üstten hizalı */
+    padding-top: 0;
+  }
+  .hakkimizda-block-second .hakkimizda-image {
+    width: 610px;
+    height: 538px;
+    border-radius: 24px;
+    overflow: hidden;
+    background-color: #ccc;
+  }
+  
+  /* Başlıklar (Farklı Font ve Weight) */
+  .hakkimizda-title {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #1e1e1e;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+  
+  /* Açıklama Metinleri */
+  .hakkimizda-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.60);
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+  
+  /* Kalan Yazı İçeriği (Düz Paragraflar) */
+  .hakkimizda-content p {
+    width: 100%;
+  }

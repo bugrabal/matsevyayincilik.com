@@ -1,0 +1,26 @@
+.kvkk-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 40px;
+    font-family: 'Satoshi', sans-serif;
+    /* Sade, düz metin görünümü */
+  }
+  
+  .kvkk-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e1e1e;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  .kvkk-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  

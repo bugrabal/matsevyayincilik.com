@@ -1,0 +1,55 @@
+/* Genel Konteyner */
+.gizlilik-container {
+    width: 1250px;
+    margin: 40px auto;
+    font-family: 'Satoshi', sans-serif;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Başlık Stilleri */
+.gizlilik-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e1e1e;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.gizlilik-subtitle {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.gizlilik-section {
+    font-size: 18px;
+    font-weight: 500;
+    color: #444;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Metin Stili */
+.gizlilik-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 16px;
+}
+
+/* Link Stilleri */
+.gizlilik-text a {
+    color: #A21E7E;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.gizlilik-text a:hover {
+    text-decoration: underline;
+}

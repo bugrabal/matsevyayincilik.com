@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@font-face {
+  font-family: 'GTWalsheimPro-Bold';
+  src: url('fonts/GTWalsheimPro-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'GTWalsheimPro-CondensedMedium';
+  src: url('fonts/GTWalsheimPro-CondensedMedium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'GTWalsheimPro-CondensedUltraBoldOblique';
+  src: url('fonts/GTWalsheimPro-CondensedUltraBoldOblique.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'GTWalsheimPro-Regular';
+  src: url('fonts/GTWalsheimPro-Regular.ttf') format('truetype');
+}
+
+/* ... diğer 28 font-face tanımı benzer şekilde eklenecektir ... */
+@font-face {
+  font-family: 'IntegralCFBold';
+  src: url('fonts/IntegralCF-Bold.otf') format('opentype');
+  /* Dosya yolunu kontrol et */
+  font-weight: bold;
+  font-style: normal;
+}
+/* Webkit tabanlı tarayıcılar için (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 8px; /* Scroll çubuğu genişliği */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Scroll çubuğu arka planı */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A21E7E; /* Scroll çubuğu rengi */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #702b5d; /* Üzerine gelince renk değişimi */
+}
+
+/* Türkiye Haritası */
+.svg-turkiye-haritasi {
+  max-width: 1140px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.svg-turkiye-haritasi svg {
+  width: 100%;
+  height: auto;
+}
+
+.warning-text-bayi {
+  text-align: center;
+  margin-top: 48px;
+  margin-bottom: 62px;
+  padding: 0 40px;
+  /* Kenarlarda sürekli boşluk */
+}
+
+.warning-text-bayi .header1 {
+  color: #A21E7E;
+  font-family: 'IntegralCFBold', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.5px;
+  margin-bottom: 32px;
+}
+
+.warning-text-bayi .header2 {
+  color: #2D2323;
+  font-family: "GT Walsheim Pro";
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 110%;
+  letter-spacing: -0.2px;
+  margin-bottom: 20px;
+}
+
+.warning-text-bayi .text {
+  color: #2D2323;
+  font-family: Inter, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 152.727%;
+  margin: 0 auto;
+  padding: 0 20px;
+  /* Mobilde daha rahat okunması için */
+}
+
+/* İl isimleri hover için */
+.il-isimleri {
+  position: absolute;
+  z-index: 2;
+  font-family: "Inter", serif;
+}
+
+.il-isimleri div {
+  font-family: "Inter", serif;
+  display: inline-block;
+  background: #D81B60;
+  /* Matsev'in ana rengi */
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* Harita path hover */
+#svg-turkiye-haritasi path {
+  cursor: pointer;
+  fill: #A21E7E;
+  transition: fill 0.3s ease-in-out;
+}
+
+#svg-turkiye-haritasi path:hover {
+  fill: #F9CA36;
+}
+
+/* Bayi Bilgisi Alanı */
+#bayi-bilgisi {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* Bayi Kartları */
+.bayi-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* Bayi Kartı */
+.bayi-card {
+  background: #fff;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  padding: 24px;
+  max-width: 420px;
+  min-width: 420px;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  color: #333;
+  position: relative;
+  overflow: hidden;
+  background-clip: padding-box;
+}
+
+/* Çok İnce Gradyen Stroke */
+.bayi-card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #F9CA36, #A21E7E);
+  opacity: 0.8;
+}
+
+/* Hover Efekti - Arka plan değişmez, sadece gölge eklenir */
+.bayi-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Bayi Başlığı */
+.bayi-card strong {
+  font-size: 22px;
+  color: #A21E7E;
+  font-weight: 600;
+  font-family: "Inter", serif;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Bayi Detayları */
+.bayi-card p {
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0;
+  font-family: "Inter", serif;
+  line-height: 1.5;
+}
+
+/* Google Maps Butonu */
+.bayi-card a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 10px 16px;
+  font-size: 15px;
+  background: linear-gradient(135deg, #F9CA36, #E0B22F);
+  color: #5C2C6D;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 12px rgba(249, 202, 54, 0.3);
+  position: relative;
+}
+
+/* Buton Hover Efekti */
+.bayi-card a:hover {
+  background: linear-gradient(135deg, #A21E7E, #8E196B);
+  color: #fff;
+  transform: scale(1.04);
+  box-shadow: 0px 5px 16px rgba(162, 30, 126, 0.4);
+}
+
+/* Modern İkonlar */
+.bayi-card a i {
+  font-size: 17px;
+  color: #5C2C6D;
+}
+
+#bayi-bilgisi h3 {
+  font-family: "GT Walsheim Pro", sans-serif;
+  font-size: 24px;
+  color: #A21E7E;
+  margin-bottom: 20px;
+}
+
+
+/* Bayi Arama Formu */
+.dealer-search {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dealer-search .search-header {
+  font-family: "GT Walsheim Pro", sans-serif;
+  font-size: 24px;
+  color: #A21E7E;
+  margin-bottom: 20px;
+}
+
+.dealer-search .search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px; /* Genişlik sınırı, çok geniş ekranlarda da ortalanması için */
+  margin-bottom: 64px;
+}
+
+.dealer-search .form-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dealer-search label {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.dealer-search select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.dealer-search select:focus {
+  border-color: #A21E7E;
+}
+
+
+/* (Mevcut .bayi-container ve .bayi-card tasarımlarınız geçerli olacak) */
+
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .bayi-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bayi-card {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .warning-text-bayi {
+    padding: 0 60px;
+  }
+}
+
+/* Tablet cihazlar için (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .warning-text-bayi .header1 {
+    font-size: 22px;
+  }
+
+  .warning-text-bayi .header2 {
+    font-size: 48px;
+  }
+
+  .warning-text-bayi .text {
+    font-size: 20px;
+    line-height: 150%;
+  }
+}
+
+/* Genel mobil cihazlar için (max-width: 767px) */
+@media (max-width: 767px) {
+  .warning-text-bayi {
+    padding: 0 24px;
+  }
+
+  .warning-text-bayi .header1 {
+    font-size: 20px;
+  }
+
+  .warning-text-bayi .header2 {
+    font-size: 42px;
+  }
+
+  .warning-text-bayi .text {
+    font-size: 18px;
+    line-height: 145%;
+  }
+}
+
+/* Küçük mobil cihazlar için (max-width: 480px) */
+@media (max-width: 480px) {
+  .warning-text-bayi {
+    padding: 0 16px;
+  }
+
+  .warning-text-bayi .header1 {
+    font-size: 18px;
+  }
+
+  .warning-text-bayi .header2 {
+    font-size: 34px;
+  }
+
+  .warning-text-bayi .text {
+    font-size: 16px;
+    line-height: 140%;
+    padding: 0 12px;
+    /* Kenarlarda daha fazla boşluk bırakarak tam okunabilir hale getirdim */
+  }
+}

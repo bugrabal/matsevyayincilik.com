@@ -1,0 +1,84 @@
+/* Font Tanımı */
+@font-face {
+    font-family: 'Satoshi';
+    src: url('/fonts/Satoshi-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('/fonts/Satoshi-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  /* Genel Ürün Detay Alanı */
+  .alturundetay {
+    max-width: 1440px; /* 1440px genişlik */
+    margin: 0 auto; /* Ortalanmış yapı */
+    padding: 0; /* Kenarlardan boşluk yok */
+    box-sizing: border-box;
+    display: block;
+  }
+  
+  /* Ürün Bilgisi */
+  .product-description {
+    color: rgba(0, 0, 0, 0.60);
+    font-family: 'Satoshi', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    width: 100%; /* Yazılar tam genişlikte yayılsın */
+    text-align: justify; /* Yazıyı hizala ve düzgün görünmesini sağla */
+  }
+  
+  .product-title {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e1e1e;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+  
+  /* Kargo Bilgileri */
+  .shipping-info {
+    margin-top: 30px;
+  }
+  
+  .shipping-title {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e1e1e;
+    margin-bottom: 12px;
+    text-align: left;
+  }
+  
+  .shipping-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Yazılar tam genişlikte yayılsın */
+  }
+  
+  .shipping-list li {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: rgba(0, 0, 0, 0.75);
+    margin-bottom: 8px;
+  }
+  
+  .shipping-list li span {
+    font-weight: 700; /* Kargo türleri vurgulu */
+  }
+  
+  .shipping-list .highlight {
+    font-size: 18px; /* Daha büyük font */
+    font-weight: 700;
+    color: #d32f2f; /* Daha dikkat çekici kırmızı renk */
+    margin-top: 16px;
+  }
+  
